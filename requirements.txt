@@ -1,0 +1,25 @@
+# Streamlit Cloud 배포용 (Python 3.12 권장)
+# torch는 CPU 전용 휠로 설치 (기본 PyPI 휠은 GPU 라이브러리까지 받아 수 GB가 됨)
+--extra-index-url https://download.pytorch.org/whl/cpu
+
+# 화면
+streamlit>=1.40
+pandas>=2.0
+numpy
+openpyxl
+
+# BigQuery (프로필 조회 · 벡터 검색 VECTOR_SEARCH · 캐시)
+google-cloud-bigquery[pandas]>=3.20
+google-auth
+
+# LLM (LangChain, Gemini/Claude 교체)
+pydantic>=2.0
+python-dotenv
+langchain-core
+langchain-google-genai
+langchain-anthropic
+
+# 임베딩 · 검색 (BGE-M3, 질문 캐시에 없을 때만 모델 로딩) / BM25 하이브리드 옵션
+torch
+sentence-transformers
+rank-bm25

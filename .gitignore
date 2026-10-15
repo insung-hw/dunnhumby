@@ -1,0 +1,27 @@
+# 비밀 정보 — 절대 올리지 않음
+.env
+.env.*
+.streamlit/secrets.toml
+*.json.key
+*service_account*.json
+*credentials*.json
+
+# 데이터·결과물 (원본 데이터 재배포 금지, 결과는 BigQuery에 있음)
+data/
+*.csv
+*.csv.gz
+*.pkl
+*.xlsx
+*.pbix
+briefs_*.json
+
+# Python · 편집기
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.ipynb_checkpoints/
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
